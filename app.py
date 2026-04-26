@@ -1,4 +1,4 @@
-import requests , os , psutil , sys , jwt , pickle , json , binascii , time , urllib3 , base64 , datetime , re , socket , threading , ssl , pytz , aiohttp
+import requests , os , sys , jwt , pickle , json , binascii , time , urllib3 , base64 , datetime , re , socket , threading , ssl , pytz , aiohttp
 from flask import Flask, request, jsonify
 from protobuf_decoder.protobuf_decoder import Parser
 from xC4 import * ; from xHeaders import *
@@ -416,8 +416,7 @@ async def TcPChaT(ip, port, AutHToKen, key, iv, LoGinDaTaUncRypTinG, ready_event
                                                 await SEndPacKeT(whisper_writer, online_writer, 'OnLine', H)
                                             if uid4:
                                                 H = await Emote_k(uid4, idT, key, iv, region)
-                                                await SEndPacKeT(whisper_writer, online_writer, 'OnLine', H)
-                                            if uid5:
+                                                                           if uid5:
                                                 H = await Emote_k(uid5, idT, key, iv, region)
                                                 await SEndPacKeT(whisper_writer, online_writer, 'OnLine', H)
                                             if uid6:
@@ -590,7 +589,8 @@ def join_team():
 
 def run_flask():
     port = int(os.environ.get("PORT", 10000))
-    app.run(host='0.0.0.0', port=port, debug=True, use_reloader=False)
+    app.run(host='0.0.0.0', port=port, debug=False, use_reloader=False)
+
 
 # ---------------------- MAIN BOT SYSTEM ----------------------
 
@@ -681,3 +681,4 @@ async def StarTinG():
 
 if __name__ == '__main__':
     asyncio.run(StarTinG())
+                                
