@@ -416,7 +416,8 @@ async def TcPChaT(ip, port, AutHToKen, key, iv, LoGinDaTaUncRypTinG, ready_event
                                                 await SEndPacKeT(whisper_writer, online_writer, 'OnLine', H)
                                             if uid4:
                                                 H = await Emote_k(uid4, idT, key, iv, region)
-                                                                           if uid5:
+                                                await SEndPacKeT(whisper_writer, online_writer, 'OnLine', H)
+                                            if uid5:
                                                 H = await Emote_k(uid5, idT, key, iv, region)
                                                 await SEndPacKeT(whisper_writer, online_writer, 'OnLine', H)
                                             if uid6:
@@ -681,4 +682,3 @@ async def StarTinG():
 
 if __name__ == '__main__':
     asyncio.run(StarTinG())
-                                
